@@ -1,0 +1,283 @@
+/************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. DEFAULT OVERRIDES
+ * 2. GENERAL CLASSES
+ * 3. MODAL
+ * 4. BUTTONS
+ * 5. GOALS QUOTE
+ * 6. GOALS LIST
+ * 7. MEDIA QUERIES
+ ***********************************************/
+
+/*1. DEFAULT OVERRIDES*/
+h2, h3{
+	text-transform: uppercase;
+}
+
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+input[type="submit"].item-title{
+	all: unset;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+h2{
+	margin: 0;
+	padding: 0;
+}
+
+/*2. GENERAL CLASSES*/
+.page-wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.heading{
+	border-left: 3px solid #ffb348;
+	padding-left: 10px;
+	display: inline-block;
+	margin-bottom: 15px;
+}
+
+.item-container {
+	border-radius: 5px;
+    border: 1px solid lightgrey;
+    /*Used https://mycolor.space/ to generate gradient*/
+    background-image: linear-gradient(to bottom, #ffffff, #fcfcfc, #f9f9f9, #f7f7f7, #f4f4f4);
+}
+
+.item{
+	padding-left: 15px;
+	margin-bottom: 5px;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.25s all;
+	color: grey;
+}
+
+.item-title{
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.item-information{
+	flex: 1;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.quote, .item{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.item-icon-container{
+	margin-right: 5px;
+}
+
+.item-icon-container form{
+	display: inline-block;
+}
+
+.item:hover{
+	filter: brightness(95%);
+}
+
+.item:active{
+	filter: brightness(70%);
+}
+
+.item button, .addButton, .details{
+	all: unset;
+	padding : 10px;
+}
+
+.highlight{
+	color: #ffb348;
+}
+
+/*3. MODAL*/
+.modal-header{
+	text-transform: uppercase;
+}
+
+.modal-container{
+	padding: 50px;
+}
+
+.modal-container input{
+	display: block;
+}
+
+/*4. BUTTONS*/
+.button-container {
+    width: 100%;
+	display: block;
+    margin: 20px 0;
+}
+
+.button, .container{
+	border-radius: 5px;
+}
+
+.addButton{
+	color: #ffb348;
+	font-size: 1.5rem;
+	padding: 0 10px;
+}
+
+.button-main{
+	color: black;
+	background-color: #FFE691;
+    background-image: linear-gradient(to right, rgba(255, 173, 114, 0.5), rgba(255, 190, 114, 0.5), rgba(255, 230, 145, 0.5));
+}
+
+/*5. GOALS QUOTE*/
+.quote{
+	font-size: 1.5rem;
+}
+
+#goals-quote-text{
+	margin: 55px 0px;
+	padding: 0px 45px;
+	color: white;
+	width: 100%;
+}
+
+#goals-quote-text h2{
+	font-size: 1.75rem;
+}
+
+#goals-quote-text p{
+	color: white;
+}
+
+#goals-quote{
+	background: rgb(0, 0, 0, 0.2);
+	flex: 1;
+}
+
+/*6. GOALS LIST*/
+#goals{
+	overflow: hidden;
+	background-image: url("../img/goals.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+}
+
+#goals, #item-list{
+	height: 500px;
+}
+
+.complete{
+	color: #6AAF6A;
+}
+
+.status{
+	font-size: 1.25rem;
+	color: grey;
+	margin-right: 20px;
+}
+
+.item-description{
+	padding: 10px 20px;
+	margin-right: 15px;
+	border-top: 1px solid #dedede;
+	width: 100%;
+	margin-top: 5px;
+}
+
+.item-complete-by{
+	font-size: 0.8rem;
+	text-transform: uppercase;
+}
+
+#item-list{
+	color: white;
+	background: rgb(0, 0, 0, 0.75);
+	border-right: 1px solid white;
+	box-shadow: 0px 0px 15px -10px rgba(0,0,0,1);
+	padding: 50px;
+	flex: 2;
+	/*Referenced: https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll*/
+	overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+#item-list::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+#item-title{
+	font-size: 3rem;
+	margin-bottom: 20px;
+}
+
+#message p{
+	color: white;
+}
+
+
+/*7. MEDIA QUERIES*/
+@media screen and (max-width: 900px) {
+	#goals-quote{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	h3{
+		font-size: 1.5rem;
+	}
+	.item{
+		padding: 5px;
+	}
+	.goalLabel{
+		display: block;
+	}
+}
+
+@media screen and (max-width:500px){
+	#item-title{
+		font-size: 1.8rem;
+	}
+
+	h3{
+		font-size: 1.25rem;
+	}
+	.item-icon-container{
+		width: 100%;
+	}
+	.addButton{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 400px){
+	button.updateStatus{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+}

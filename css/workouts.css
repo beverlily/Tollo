@@ -1,0 +1,20 @@
+.workout {
+    margin: 50px;
+}
+
+.workout-title-img {
+    height: auto;
+    width: 180px;
+}
+
+#saveProgram {
+    margin-top: 6px;
+}
+
+#programForm {
+    margin: 6px;
+}
+
+.mar {
+    margin: 6px;
+}

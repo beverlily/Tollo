@@ -1,0 +1,210 @@
+/************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. DEFAULT OVERRIDES
+ * 2. GENERAL CLASSES
+ * 3. MODAL
+ * 4. BUTTONS
+ * 5. BANNER
+ * 6. EXERCISE/CATEGORY LIST
+ * 7. MEDIA QUERIES
+ ***********************************************/
+
+ /*1. DEFAULT OVERRIDES*/
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+h2, h3{
+	text-transform: uppercase;
+}
+
+h2{
+	margin: 0;
+	padding: 0;
+}
+
+h3{
+	vertical-align: middle;
+}
+
+a {
+    color: #7e8fb5;
+	transition: 0.5s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+label{
+	font-weight: bold;
+}
+
+input[type="submit"].item-title{
+	all: unset;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+/*2. GENERAL CLASSES*/
+.page-wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.content-container {
+    border: 1px solid lightgrey;
+    padding: 50px;
+    box-shadow: 0px 0px 15px -8px rgba(0,0,0,1);
+    /*Used https://mycolor.space/ to generate gradient*/
+    background-image: linear-gradient(to bottom, #ffffff, #fcfcfc, #f9f9f9, #f7f7f7, #f4f4f4);
+}
+
+.item button[type="submit"]{
+	all: unset;
+	padding : 10px;
+}
+
+.item-container {
+    border: 1px solid lightgrey;
+	background: white;
+	border-radius: 5px;
+}
+
+.item{
+	padding-left: 15px;
+	margin-bottom: 5px;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.25s all;
+	color: grey;
+}
+
+.item:hover{
+	filter: brightness(90%);
+}
+
+.item:active{
+	filter: brightness(70%);
+}
+
+.item-information{
+	flex: 1;
+}
+
+.item-icon-container{
+	margin-left: 30px;
+	margin-right: 5px;
+}
+
+.item-icon-container form{
+	display: inline-block;
+}
+
+.item-description{
+	font-size: 0.8rem;
+	text-transform: uppercase;
+}
+
+.heading{
+	border-left: 3px solid #ffb348;
+	padding-left: 10px;
+}
+
+.fas{
+	color: grey;
+}
+
+/*3. MODAL*/
+.modal-header{
+	text-transform: uppercase;
+}
+
+.modal-container{
+	padding: 50px;
+}
+
+.modal-container input{
+	display: block;
+}
+
+/*4. BUTTONS*/
+.button-container {
+    width: 100%;
+	display: block;
+	margin: 20px 0;
+}
+
+.button, .container{
+	border-radius: 5px;
+}
+
+.button-main{
+	color: black;
+	background-color: #FFE691;
+    background-image: linear-gradient(to right, rgba(255, 173, 114, 0.5), rgba(255, 190, 114, 0.5), rgba(255, 230, 145, 0.5));
+}
+
+/*5. BANNER*/
+#banner{
+	background-image: url("../img/exercise.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	height: 175px;
+}
+
+/*6. EXERCISE/CATEGORY LIST*/
+#exercises{
+	min-height: 500px;
+}
+
+#exercise-list{
+	padding: 20px;
+}
+
+#message{
+	width: 100%;
+}
+
+#item-list{
+	color: white;
+	background: rgb(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 15px -10px rgba(0,0,0,1);
+	padding: 50px;
+	/*Referenced: https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll*/
+	overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+/*7. MEDIA QUERIES*/
+@media screen and (max-width: 600px) {
+	ul#exercise-list{
+		padding: 0;
+	}
+	.item-icon-container{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	h2{
+		font-size: 1.5rem;
+	}
+	.button{
+		font-size: 0.75rem;
+	}
+}

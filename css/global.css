@@ -1,0 +1,428 @@
+/*DEFAULT OVERRIDES*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/*Test font for now??*/
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  color: #222629;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul.menu {
+  margin: 0;
+}
+
+/*GENERAL CLASSES*/
+.pageWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  padding: 100px 150px;
+}
+
+.hidden {
+  position: absolute;
+  left: -10000px;
+}
+
+.flexContainer {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu li:not(:first-child) {
+  margin-left: 40px;
+}
+
+.highlight {
+  color: #ffb348;
+}
+
+.buttonMain {
+  color: black;
+  background-color: #ffe691;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 173, 114, 0.5),
+    rgba(255, 190, 114, 0.5),
+    rgba(255, 230, 145, 0.5)
+  );
+}
+
+.button {
+  border-radius: 5px;
+}
+
+.button {
+  font-weight: bold;
+  padding: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  transition: 0.25s all;
+  text-transform: uppercase;
+  border: none;
+}
+
+.button:hover {
+  background-color: #bbf9f5;
+  background-image: linear-gradient(
+    to right,
+    rgba(130, 172, 248, 0.5),
+    rgba(114, 199, 254, 0.5),
+    rgba(187, 249, 245, 0.5)
+  );
+  text-decoration: none;
+}
+
+.buttonContainer {
+  display: block;
+  margin: 20px 0;
+}
+
+.success {
+  color: #6aaf6a;
+}
+
+.error {
+  color: red;
+}
+
+/*GENERAL STYLING*/
+#header,
+#footer {
+  background-image: linear-gradient(
+    to right,
+    #003271,
+    #0f438b,
+    #1c56a5,
+    #2769c0,
+    #307ddc
+  );
+  color: white;
+}
+
+#header a:hover,
+#footer a:hover,
+#burger:hover {
+  color: #ffb348;
+}
+
+#header a,
+#footer a {
+  transition: all 0.5s;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+/*HEADER*/
+#header {
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.nav-toggle:checked ~ #mainNav {
+  display: block;
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ #mainNav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+#navTog {
+  display: none;
+}
+
+.nav-tog-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#burger {
+  color: white;
+}
+
+#mainNav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background-image: linear-gradient(
+    to right,
+    #003271,
+    #0f438b,
+    #1c56a5,
+    #2769c0,
+    #307ddc
+  );
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+#mainNav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#mainNav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+  list-style-type: none;
+}
+
+#mainNav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+#login {
+  position: relative;
+  left: 10px;
+}
+
+#siteLogo {
+  width: 80px;
+}
+
+/* Notifications */
+
+#navbarDropdown {
+  width: 30px;
+  height: auto;
+  background: rgba(3, 3, 63, 0);
+  border: thin solid rgba(0, 0, 255, 0);
+  border-radius: 50%;
+}
+
+.fa-bell {
+  overflow: none;
+  width: 100%;
+  color: #fff;
+}
+
+#dropdownMenu {
+  position: relative;
+  top:-15px;
+  right:77px;
+  width:200px;
+  font-size: 24px;
+  line-height: 12px;
+  margin-left: -100px;
+  z-index: 190;
+  height: auto;
+  background: white;
+  border: thin solid rgba(128, 128, 128, 0.589);
+  box-shadow: #222629;
+  max-height: 600px;
+  overflow-x: none;
+  overflow-y: scroll;
+  text-align: left;
+}
+
+.dropdownContent {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+a {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+
+#notifContainer > #navbarDropdown > .fa > .badge {
+  top: -20px;
+  right: 12px;
+  border-radius: 50%;
+  color: white;
+  background-color: #01469b;
+  font-size: 10px;
+  position: relative;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+#notifContainer {
+  position: absolute;
+  top: 80px;
+  right: 15px;
+  z-index: 10000;
+  width: 30px;
+}
+
+#dropdownMenu b,
+#dropdownMenu p {
+  color: black;
+  margin-top: 5px;
+}
+
+#dropdownMenu i {
+  color: black;
+  margin-bottom: 100px;
+
+}
+
+#clearBtn {
+  margin: 10px 0 0 20px;
+}
+
+#navbarDropdown i {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+
+#list {
+  list-style-type: none;
+  font-size: 16px;
+  margin: 0;
+  padding: 0 0 0 10px;
+}
+
+/*MAIN NAVIGATION MENU*/
+
+/*MAIN CONTENT*/
+#mainContent {
+  min-height: 100vh;
+}
+
+/*FOOTER*/
+
+#footerLogo {
+  max-width: 60px;
+  margin: 0 auto;
+}
+
+#smLinks {
+  padding: 20px 0 20px 0;
+  margin: 0 auto;
+  display: block;
+}
+
+.footer-copyright {
+  background-color: #022147;
+}
+
+/*SKIP TO MAIN*/
+#skipToMain:focus {
+  position: relative;
+  left: 0;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (min-width: 1116px) {
+  .nav-tog-label {
+    display: none;
+  }
+
+  #header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 1fr);
+  }
+
+  #notifContainer {
+    display: relative;
+    right: 100px;
+    top: 80px;
+    width: 30px;
+  }
+
+  #navbarDropdown {
+    position: absolute;
+    width: 30px;
+    height: auto;
+  }
+
+  #dropdownMenu {
+    position: relative;
+    top: 24px;
+    right: 55px;
+    width: 200px;
+  }
+
+  #siteLogo {
+    margin: 0;
+    padding: 0;
+    grid-column: 2 / 3;
+  }
+
+  #mainNav {
+    grid-column: 3 / 4;
+    all: unset;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    bottom: 0;
+  }
+
+  #login {
+    grid-column: 3 / 4;
+    position: relative;
+    left: 50px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  #mainNav ul {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  #mainNav a {
+    opacity: 1;
+  }
+}
+
+/*CSS for Phones*/
+@media screen and (max-width: 600px) {
+}

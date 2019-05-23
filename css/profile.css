@@ -1,0 +1,316 @@
+#pageWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#profileTabs {
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+.tab-content {
+  margin-bottom: 50px;
+}
+
+.nav-tabs {
+  text-align: center;
+}
+
+ul.nav {
+  display: inline-block;
+}
+
+ul.nav li {
+  display: inline;
+}
+
+ul.nav a {
+  float: left;
+}
+
+/* Profile Head */
+.profileHead {
+  margin: 0 auto;
+}
+
+#imgContainer {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid rgba(58, 120, 255, 0.178);
+  margin: 0 auto;
+  position: relative;
+  top: 75px;
+}
+
+#imgContainer img {
+  display: inline;
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+}
+
+#username {
+  text-align: center;
+  margin-top: 75px;
+  margin-bottom: 25px;
+}
+
+/* Workout Logs - Delan*/
+.logPrompt {
+  padding-top: 10px;
+}
+
+.listAllPrompt {
+  text-align: right;
+}
+
+/* Reminders */
+#setRemBtn {
+  margin-top: 10px;
+}
+
+#remindersForm {
+  margin: 0 550px 0 50px;
+}
+
+#notifyOption {
+  padding: 20px 0 5px 0;
+}
+
+#listRem ul li {
+  list-style-type: none;
+  display: inline-flex;
+}
+
+#listRem ul li p {
+  padding: 10px;
+  margin-top: 5px;
+}
+
+#listRem button {
+  margin: 10px;
+}
+
+#remTitle,
+#remMsg {
+  width: 500px;
+}
+
+#remDate,
+#remTime {
+  width: 150px;
+}
+
+#remBtn {
+  margin: 50px 0 0 15px;
+}
+
+.mar {
+  margin: 6px;
+}
+
+/* Update Form */
+
+#updateRemForm {
+  width: 300px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+
+#editTitle {
+  margin: 20px 0 20px 50px;
+}
+
+/* ABOUT */
+
+#aboutTab {
+  margin: 10px 0 0 0;
+  padding: 15px;
+}
+
+#saveAbout {
+  margin-top: 10px;
+}
+
+/*Measurements*/
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#measurements h3 {
+  font-size: 1.2rem;
+}
+
+.item button[type="submit"] {
+  all: unset;
+  padding: 10px;
+}
+
+#measurements input[type="submit"].item-title {
+  all: unset;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.button-container {
+  width: 100%;
+  display: block;
+  margin: 20px 0;
+}
+
+#measurements label {
+  font-weight: bold;
+}
+
+.button {
+  border-radius: 5px;
+}
+
+.button-main {
+  color: black;
+  background-color: #ffe691;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 173, 114, 0.5),
+    rgba(255, 190, 114, 0.5),
+    rgba(255, 230, 145, 0.5)
+  );
+}
+
+.button {
+  font-weight: bold;
+  padding: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  transition: 0.25s all;
+  text-transform: uppercase;
+  border: none;
+}
+
+.button:hover {
+  background-color: #bbf9f5;
+  background-image: linear-gradient(
+    to right,
+    rgba(130, 172, 248, 0.5),
+    rgba(114, 199, 254, 0.5),
+    rgba(187, 249, 245, 0.5)
+  );
+  text-decoration: none;
+}
+
+.success {
+  color: #6aaf6a;
+}
+
+.error {
+  color: red;
+}
+
+.measurement-title {
+  font-weight: bold;
+}
+
+.measurement-title:not(.first) {
+  margin-left: 10px;
+}
+
+.item button[type="submit"] {
+  all: unset;
+  padding: 10px;
+}
+
+input[type="submit"].item-title {
+  all: unset;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.item-information {
+  flex: 1;
+}
+
+input.mName {
+  display: block;
+}
+
+input.small {
+  width: 70px;
+}
+
+.item-icon-container {
+  margin-left: 30px;
+  margin-right: 5px;
+}
+
+.item-icon-container form {
+  display: inline-block;
+}
+
+.fas {
+  color: grey;
+}
+
+@media screen and (max-width: 700px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .edit-measurement-form label {
+    display: block;
+  }
+
+  .edit-measurement-form input {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  #measurements .form-row {
+    display: block;
+  }
+
+  #measurements .col {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .item-icon-container {
+    margin: 10px 0 0 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .measurement-title:not(.first) {
+    margin: 0;
+  }
+
+  .measurement-title {
+    display: block;
+  }
+
+  .mName {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .button-container .button {
+    margin-bottom: 10px;
+  }
+
+  input::placeholder {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  input::placeholder {
+    transition: all 0.5s;
+    font-size: 0.7rem;
+  }
+}

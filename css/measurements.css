@@ -1,0 +1,220 @@
+/************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. DEFAULT OVERRIDES
+ * 2. GENERAL CLASSES
+ * 3. MODAL
+ * 4. FORMS
+ * 5. BUTTONS
+ * 6. MEASUREMENTS LIST
+ * 7. MEDIA QUERIES
+ ***********************************************/
+ /*1. DEFAULT OVERRIDES*/
+ h2{
+ 	text-transform: uppercase;
+ 	transition: all 0.2s;
+ }
+
+ h3{
+ 	font-size: 1.2rem;
+ }
+
+ ul{
+ 	list-style: none;
+ 	margin: 0;
+ 	padding: 0;
+ }
+
+ label{
+ 	font-weight: bold;
+ }
+
+ a:hover{
+   text-decoration: none;
+ }
+
+/*2. GENERAL CLASSES*/
+.content-container {
+    border: 1px solid lightgrey;
+    padding: 50px;
+    box-shadow: 0px 0px 15px -8px rgba(0,0,0,1);
+    /*Used https://mycolor.space/ to generate gradient*/
+    background-image: linear-gradient(to bottom, #ffffff, #fcfcfc, #f9f9f9, #f7f7f7, #f4f4f4);
+}
+
+.page-wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.fas{
+	color: grey;
+}
+
+/*3. MODAL*/
+.modal-header{
+	text-transform: uppercase;
+}
+
+.modal-container{
+	padding: 50px;
+}
+
+.modal-container input{
+	display: block;
+}
+
+
+/*4. FORMS*/
+ /*Referenced https://css-tricks.com/snippets/css/turn-off-number-input-spinners/*/
+ input[type=number]::-webkit-inner-spin-button,
+ input[type=number]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+ }
+
+ .item button[type="submit"]{
+ 	all: unset;
+ 	padding : 10px;
+ }
+
+ input[type="submit"].item-title{
+ 	all: unset;
+ 	font-weight: bold;
+ 	text-transform: uppercase;
+ }
+
+ input[type=number] {
+     -moz-appearance: textfield; /* Firefox */
+ }
+
+ .item button[type="submit"]{
+ 	all: unset;
+ 	padding : 10px;
+ }
+
+ input[type="submit"].item-title{
+ 	all: unset;
+ 	font-weight: bold;
+ 	text-transform: uppercase;
+ }
+
+ input.mName{
+ 	display: block;
+ }
+
+ input.small{
+ 	width: 70px;
+ }
+
+ .item-icon-container form{
+ 	display: inline-block;
+ }
+
+/*5. BUTTONS*/
+.button-container {
+    width: 100%;
+	display: block;
+	margin: 20px 0;
+}
+
+.button, .container{
+	border-radius: 5px;
+}
+
+.button-main{
+	color: black;
+	background-color: #FFE691;
+    background-image: linear-gradient(to right, rgba(255, 173, 114, 0.5), rgba(255, 190, 114, 0.5), rgba(255, 230, 145, 0.5));
+}
+
+/*6. MEASUREMENTS LIST*/
+.measurement-title{
+	font-weight: bold;
+}
+.measurement-title:not(.first){
+	margin-left: 10px;
+}
+
+.item-information{
+	flex: 1;
+}
+
+.item-icon-container{
+	margin-left: 30px;
+	margin-right: 5px;
+}
+
+/*7. MEDIA QUERIES*/
+@media screen and (max-width: 900px) {
+	.form-row{
+		display: block;
+	}
+
+	.col{
+		margin-bottom: 5px;
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.form-row{
+		display: block;
+	}
+
+	.col{
+		margin-bottom: 5px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	h2{
+		font-size: 1.5rem;
+	}
+	.edit-measurement-form label{
+		display: block;
+	}
+	.edit-measurement-form input{
+		margin-bottom: 5px;
+	}
+}
+
+@media screen and (max-width:650px){
+	.item-icon-container{
+		margin: 10px 0 0 0;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 550px){
+	.measurement-title:not(.first){
+		margin: 0;
+	}
+	.measurement-title{
+		display: block;
+	}
+	.mName{
+		width: 100px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.button-container .button{
+		margin-bottom: 10px;
+	}
+	input::placeholder{
+		font-size: 0.8rem;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	input::placeholder{
+		transition: all 0.5s;
+		font-size: 0.7rem;
+	}
+}
